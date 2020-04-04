@@ -11,7 +11,7 @@ In this app, the user will be able to add expenses and deposits to their budget 
 
 <hr>
 
-ABSTRACT: For this project I finished building a budget tracker app.
+ABSTRACT: For this project I worked on finishing a budget tracker app. The app can log a user's budget and save it. It will also be able to work offline on heroku and not just on local in future updates.
 
 <hr>
 
@@ -29,12 +29,12 @@ i: INSTALLATION
 
 -Clone repo to local computer
 
--Open Terminal, npm install and npm i express, them run "mongod" and "npm start" in the terminal.
+-Open Terminal, npm install, install dependencies, then npm start
 
 <hr>
 
 ii: USAGE
--Layout is as it appears, functions, and is responsive. The index page contains my About Me, the portfolio page contains links to past work, the documents and links page contains my resume and professional links, and the contact page gives users a form to contact me by email. More will be added in coming updates.
+-Layout is as it appears. The website takes in a name and asks for an amount to deposit or subtract, that amount is then rendered to the chart and can be saved and reloaded for future reference. Still currently trying to get ServiceWorker to work. More updates coming soon.
 
 <hr>
 
@@ -48,7 +48,8 @@ iii: CREDITS
 -https://silvantroxler.ch/2016/insert-or-update-with-mongodb-and-mongoose/
 -https://www.peachpit.com/articles/article.aspx?p=1326510&seqNum=4
 -https://developer.mozilla.org/en-US/docs/Web/Manifest
-
+-https://web.dev/add-manifest/
+-https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API/Using_Service_Workers
 <hr>
 
 iv: LICENSE
