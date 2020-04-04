@@ -1,3 +1,4 @@
+// DEPENDENCIES
 const express = require("express");
 const mongoose = require("mongoose");
 const logger = require("morgan");
@@ -8,7 +9,6 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(logger("dev"));
-//static assets
 app.use(express.static("public"));
 
 mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
@@ -16,7 +16,7 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
   useFindAndModify: false
 });
 
-// Importing routes
+// ROUTES
 app.use(require("./routes/api"));
 app.use(require("./routes/htmlRoutes"));
 
