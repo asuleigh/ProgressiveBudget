@@ -1,27 +1,26 @@
 const express = require("express");
-const logger = require("morgan");
 const mongoose = require("mongoose");
-const compression = require("compression");
+const logger = require("morgan");
 
-const PORT = 3000;
-
+const PORT = process.env.PORT || 8080;
 const app = express();
 
-app.use(logger("dev"));
-
-app.use(compression());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+app.use(logger("dev"));
+//static assets
 app.use(express.static("public"));
 
-mongoose.connect("mongodb://localhost/budget", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
 
-// routes here
+// Importing routes
+app.use(require("./routes/api"));
+app.use(require("./routes/htmlRoutes"));
+
 
 app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
+  console.log(`====> App running at http://localhost:${PORT} <====`);
 });
