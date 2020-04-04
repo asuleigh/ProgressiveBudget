@@ -11,7 +11,7 @@ app.use(logger("dev"));
 //static assets
 app.use(express.static("public"));
 
-mongoose.connect(process.env.MONGODB_URI || "https://protected-beyond-52173.herokuapp.com/", {
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/budget", {
   useNewUrlParser: true,
   useFindAndModify: false
 });
