@@ -1,3 +1,4 @@
+// GOT HELP WITH SERVICE WORKER
 const FILES_TO_CACHE = [
     "/",
     "/favicon.ico",
@@ -15,8 +16,8 @@ const FILES_TO_CACHE = [
   ]
   
   const CACHE_NAME = "app-cache-v1";
-  
-  // install
+
+// SETS TO INSTALL FILES BEING CACHED
   self.addEventListener("install", event => {
     event.waitUntil(
       caches.open(CACHE_NAME).then(cache => {
@@ -27,13 +28,13 @@ const FILES_TO_CACHE = [
   
   });
   
+  // FETCHES FILES
   self.addEventListener("fetch", function (event) {
     if (event.request.url.includes("/api/")) {
       event.respondWith(
         caches.open(CACHE_NAME).then(cache => {
           return fetch(event.request)
             .then(response => {
-              // If the response was good, clone it and store it in the cache.
               if (response.status === 200) {
                 cache.put(event.request.url, response.clone());
               }
