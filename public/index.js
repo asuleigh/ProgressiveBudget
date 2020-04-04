@@ -1,4 +1,4 @@
-<link rel="manifest" href="manifest.json"></link>
+
 if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
       navigator.serviceWorker.register("/serviceWorker.js").then(reg => {
