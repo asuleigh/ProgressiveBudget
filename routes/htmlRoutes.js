@@ -5,7 +5,7 @@ router.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "../public/index.html"))
 })
 
-//Catch all route - redirect invalid paths to index
+//REDIRECT
 router.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../public/index.html"));
 });
