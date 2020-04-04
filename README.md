@@ -46,6 +46,7 @@ iii: CREDITS
 -https://medium.com/@yugagrawal95/mongoose-mongodb-functions-for-crud-application-1f54d74f1b34
 -https://developers.google.com/web/ilt/pwa/working-with-indexeddb
 -https://silvantroxler.ch/2016/insert-or-update-with-mongodb-and-mongoose/
+-https://www.peachpit.com/articles/article.aspx?p=1326510&seqNum=4
 
 <hr>
 

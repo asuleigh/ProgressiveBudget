@@ -10,15 +10,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lbernadel/budget-book.git"
+    "url": "git+https://github.com/asuleigh/ProgressiveBudget"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/lbernadel/budget-book/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/lbernadel/budget-book#readme",
+  "homepage": "",
   "dependencies": {
     "express": "^4.17.1",
     "mongoose": "^5.8.1",
